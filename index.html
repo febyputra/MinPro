@@ -25,16 +25,56 @@
 
     <!-- Slider -->
     <header id="hero">
-        <div class="hero-slide">
-            <img src="assets/1.jpg" class="slideshow">
-            <button class="prev-btn">&lt;</button>
-            <button class="next-btn">&gt;</button>
-        </div>
         <div class="hero-welcome">
             <h1>Hi, welcome to Mae Wash</h1>
         </div>
     </header>
+
     <!-- End Slider -->
+
+    <!-- content -->
+    <div class="hero-slide">
+        <img class="slideshow" src="assets/1.jpg" alt="1">
+        <button class="prev-btn">&lt;</button>
+        <button class="next-btn">&gt;</button>
+    </div>
+
+    <script>
+        // Mengambil elemen gambar dan tombol
+        var img = document.querySelector('.slideshow');
+        var prevBtn = document.querySelector('.prev-btn');
+        var nextBtn = document.querySelector('.next-btn');
+        
+        // Membuat array dengan beberapa sumber gambar, Lihat di /assets/nama file foto mas
+        var imgSources = ['/assets/file-foto-mas', '/assets/file-foto-mas', '/assets/file-foto-mas', '/assets/file-foto-mas','/assets/file-foto-mas' ];
+        
+        // Menentukan indeks gambar saat ini
+        var currentIndex = 0;
+        
+        // Fungsi untuk mengganti gambar
+        function changeImage() {
+            img.src = imgSources[currentIndex];
+        }
+        
+        // Fungsi untuk menggeser ke gambar sebelumnya
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + imgSources.length) % imgSources.length;
+            changeImage();
+        }
+        
+        // Fungsi untuk menggeser ke gambar berikutnya
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % imgSources.length;
+            changeImage();
+        }
+        
+        // Menambahkan event listener ke tombol geser
+        prevBtn.addEventListener('click', prevImage);
+        nextBtn.addEventListener('click', nextImage);
+        
+        // Menjalankan fungsi untuk mengganti gambar setiap 3 detik
+        setInterval(nextImage, 1000);
+    </script>
 
     <!-- Vision and Mision -->
     <section id="sec1">
