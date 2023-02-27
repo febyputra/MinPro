@@ -38,47 +38,12 @@
         <button class="prev-btn">&lt;</button>
         <button class="next-btn">&gt;</button>
     </div>
-
-    <script>
-        // Mengambil elemen gambar dan tombol
-        var img = document.querySelector('.slideshow');
-        var prevBtn = document.querySelector('.prev-btn');
-        var nextBtn = document.querySelector('.next-btn');
-        
-        // Membuat array dengan beberapa sumber gambar, Lihat di /assets/nama file foto mas
-        var imgSources = ['/assets/file-foto-mas', '/assets/file-foto-mas', '/assets/file-foto-mas', '/assets/file-foto-mas','/assets/file-foto-mas' ];
-        
-        // Menentukan indeks gambar saat ini
-        var currentIndex = 0;
-        
-        // Fungsi untuk mengganti gambar
-        function changeImage() {
-            img.src = imgSources[currentIndex];
-        }
-        
-        // Fungsi untuk menggeser ke gambar sebelumnya
-        function prevImage() {
-            currentIndex = (currentIndex - 1 + imgSources.length) % imgSources.length;
-            changeImage();
-        }
-        
-        // Fungsi untuk menggeser ke gambar berikutnya
-        function nextImage() {
-            currentIndex = (currentIndex + 1) % imgSources.length;
-            changeImage();
-        }
-        
-        // Menambahkan event listener ke tombol geser
-        prevBtn.addEventListener('click', prevImage);
-        nextBtn.addEventListener('click', nextImage);
-        
-        // Menjalankan fungsi untuk mengganti gambar setiap 3 detik
-        setInterval(nextImage, 1000);
-    </script>
-
     <!-- Vision and Mision -->
     <section id="sec1">
-        
+      <div class="vm-text">
+        <h1>Visi dan Misi</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porttitor non ipsum bibendum feugiat. Praesent elit dolor, pretium et venenatis non, venenatis eget velit. Praesent condimentum suscipit neque. Proin pulvinar tortor nec nisl lacinia feugiat. In sed augue ultrices nibh sollicitudin tincidunt quis non enim. Nunc massa nunc, placerat et dolor eu, fringilla placerat nibh. Integer tristique sit amet urna at mollis. Proin placerat finibus neque a ultrices. Nunc quis nisi massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam sapien nulla, cursus id odio at, ornare suscipit risus. Morbi lacinia in sem eget.</p>
+      </div>
     </section>
 
     <script src="app.js"></script>
