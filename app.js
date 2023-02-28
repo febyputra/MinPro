@@ -4,7 +4,7 @@ var prevBtn = document.querySelector('.prev-btn');
 var nextBtn = document.querySelector('.next-btn');
 
 // Membuat Array dengan Beberapa Sumber Gambar
-var imgSources = ['/assets/1.jpg', '/assets/2.jpg', '/assets/3.jpg'];
+var imgSources = ['assets/1.jpg', 'assets/2.jpg', 'assets/3.jpg'];
 
 // Menentukan Indeks Gambar Saat Ini
 var currentIndex = 0;
@@ -31,4 +31,4 @@ prevBtn.addEventListener('click', prevImage);
 nextBtn.addEventListener('click', nextImage);
 
 // Menjalankan Fungsi untuk Replace Gambar setiap 3 detik
-(nextImage, 1000);
+setInterval(nextImage, 1000);
