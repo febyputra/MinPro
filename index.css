@@ -59,10 +59,6 @@ body {
 /* End Navbar */
 
 /* Hero Slider */
-#hero {
-    display: flex;
-}
-
 .hero-slide {
     display: flex;
     margin-left: 115px;
@@ -95,7 +91,7 @@ body {
 }
 
 .hero-welcome h1 {
-     display: block;
+     display: flex;
      margin-top: 90px;
      position: absolute;
      right: 100px;
@@ -109,15 +105,56 @@ body {
 
 .vm-text h1 {
   position: relative;
-  bottom: 430%;
+  bottom: 380%;
   text-align: center;
 }
 
 .vm-text p {
   position: relative;
-  bottom: 50%;
+  bottom: 340%;
   text-indent: 50px;
   text-align: justify;
   padding-left: 90px;
   width: 90%;
+}
+/* End Vision and Mission */
+#trailer {
+    display: flex;
+    justify-content: center;
+}
+
+.trailer-business h1 {
+    text-align: center;
+    position: relative;
+    bottom: 300px;
+}
+
+.trailer-business figure > img {
+    margin-top: -230px;
+}
+
+.trailer-business figure > figcaption {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.footer-down {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    background-color: lightseagreen;
+    height: 55px;
+}
+
+.footer-down p {
+    padding-top: 20px;
+    padding-left: 980px;
+}
+
+.footer-down img {
+    width: 6%;
+    height: 6%;
+    position: absolute;
+    right: 3%;
+    margin-top: 10px;
 }
